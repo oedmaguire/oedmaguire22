@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hi, Open?</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff4e6;
+      color: #333;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .gif-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+    .gif-grid img {
+      width: 150px;
+      height: 150px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+    .gif-grid img:hover {
+      transform: scale(1.1);
+    }
+    .message {
+      font-size: 1.8em;
+      margin: 20px 0;
+      color: #ff7f50;
+    }
+    .buttons {
+      margin: 20px;
+    }
+    .buttons button {
+      font-size: 1.2em;
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #ffb6c1;
+      color: #fff;
+    }
+    .buttons button:hover {
+      background-color: #ff7f50;
+    }
+  </style>
+</head>
+<body>
+  <div id="gif-grid" class="gif-grid">
+    <img src="cinnamoroll1.gif" alt="Cinnamoroll GIF 1">
+    <img src="cinnamoroll2.gif" alt="Cinnamoroll GIF 2">
+    <img src="cinnamoroll3.gif" alt="Cinnamoroll GIF 3">
+    <img src="cinnamoroll4.gif" alt="Cinnamoroll GIF 4">
+  </div>
+  <p id="message" class="message">Hi, open?</p>
+  <div class="buttons">
+    <button class="yes" onclick="openLetter()">Yes</button>
+    <button class="no" onclick="showSad()">No</button>
+  </div>
+
+  <script>
+    function openLetter() {
+      window.location.href = "hello.html";
+    }
+
+    function showSad() {
+      const message = document.getElementById("message");
+      const gifGrid = document.getElementById("gif-grid");
+
+      message.innerText = "Yawa yes ang i click";
+      message.style.color = "#ff4500";
+
+      gifGrid.innerHTML = `
+        <img src="cinnamoroll-sad.png" alt="Sad Cinnamoroll 1">
+        <img src="cinnamoroll-sad.png" alt="Sad Cinnamoroll 2">
+        <img src="cinnamoroll-sad.png" alt="Sad Cinnamoroll 3">
+        <img src="cinnamoroll-sad.png" alt="Sad Cinnamoroll 4">
+      `;
+    }
+  </script>
+</body>
+</html>

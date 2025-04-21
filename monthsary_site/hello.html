@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy 2nd Monthsary!</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff4e6;
+      color: #333;
+      text-align: center;
+    }
+    header {
+      background-color: #ffe4b5;
+      padding: 20px;
+      border-bottom: 5px solid #f9c89b;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin: 0;
+      color: #ff7f50;
+    }
+    .chikawa-image {
+      margin: 20px 0;
+    }
+    .chikawa-image img {
+      width: 200px;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .letter {
+      margin: 20px;
+      padding: 20px;
+      background: #fff;
+      border: 2px dashed #ffb6c1;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      font-size: 1.2em;
+      line-height: 1.6;
+      text-align: left;
+    }
+    footer {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #ffe4b5;
+      font-size: 0.9em;
+      color: #ff4500;
+    }
+    .music-buttons {
+      margin-top: 20px;
+    }
+    .music-buttons button {
+      padding: 10px 20px;
+      font-size: 1.2em;
+      margin: 5px;
+      background-color: #ffb6c1;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .music-buttons button:hover {
+      background-color: #ff7f50;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Happy 1st Monthsary!</h1>
+  </header>
+
+  <div class="chikawa-image">
+    <img src="cinnamoroll-happy.png" alt="Cinnamoroll Character">
+  </div>
+
+  <section class="letter">
+    <p>HAPPY 1ST MONTHSARRY toby, love, langga, wifey, and my shuldits</p>
+    <p>
+      I can't believe we've been together for 1 month palang, its like ga uban naman gud ta for many months or years but to think 1 month pata love hehe. Everyday since the day you said "yes" sakoang apaka nonchalant na proposal, I've been falling deeper and deeper saimoa, you made me the happiest man alive whenever mag uban ta, tho d kaayu nimo ma feel sakoang expressions, but i do feel like the happiest man alive. and love even though daghan na kaayu tag arguments within the first month of our relationship, trust me it'll make us stronger for the future, kay lagi ana sila the stronger the foundation mas magdugay ang structure.
+    </p>
+    <p>
+      Lovwe, I can't imagine when im not with you na, you've become a very important part of my life. So cheers to the future us who'll create more memorable memories together, through ups and downs lets stay together. Thankyou for being you, and for being mine.
+    </p>
+  </section>
+
+  <footer>
+    <p>Made with love and Usagi vibes 🐰</p>
+    <div class="music-buttons">
+      <button onclick="playMusic()">Play Music 🎵</button>
+      <button onclick="stopMusic()">Stop Music ✋</button>
+    </div>
+  </footer>
+
+  <audio id="background-music" loop>
+    <source src="youll-be-in-my-heart.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    function playMusic() {
+      const music = document.getElementById('background-music');
+      music.play();
+    }
+
+    function stopMusic() {
+      const music = document.getElementById('background-music');
+      music.pause();
+      music.currentTime = 0;
+    }
+  </script>
+</body>
+</html>
